@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\bin\Debug\netcoreapp2.2\TranslateAppDAL.deps.json
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\bin\Debug\netcoreapp2.2\TranslateAppDAL.dll
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\obj\Debug\netcoreapp2.2\TranslateAppDAL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\obj\Debug\netcoreapp2.2\TranslateAppDAL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\obj\Debug\netcoreapp2.2\TranslateAppDAL.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\obj\Debug\netcoreapp2.2\TranslateAppDAL.AssemblyInfo.cs
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.xml
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\obj\Debug\netcoreapp2.2\TranslateAppDAL.csproj.CopyComplete
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\bin\Debug\netcoreapp2.2\TranslateAppDAL.pdb
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\obj\Debug\netcoreapp2.2\TranslateAppDAL.dll
+C:\Users\User\source\repos\TranslateApplication\TranslateAppDAL\obj\Debug\netcoreapp2.2\TranslateAppDAL.pdb
