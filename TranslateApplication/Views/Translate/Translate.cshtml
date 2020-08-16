@@ -1,0 +1,62 @@
+﻿@using TranslateApplication.Models.Enums
+@using TranslateApplication.Models.Translation
+@model List<TranslateModel>
+
+@{
+    ViewBag.Title = "Translate";
+    Layout = "_Layout";
+}
+
+<form asp-action="Translate" asp-controller="Translate" asp-anti-forgery="true">
+    <div class="form-group">
+        <div>
+            Перевести с: @Html.DropDownList("SourceLanguage",
+   LanguageListReceiver.GetSelectList(typeof(Languages)), new { @class = "form-control col-md-3" })
+        </div>
+        <br />
+        <div>
+            <input id="SearchString" value="@(ViewBag.SearchString ?? String.Empty)" type="text" name="SearchString" autofocus>
+            <input type="hidden" value="SourceLanguage"/>
+            @* onkeyup='location.href = "/translate/translate?searchString=" + this.value;' *@
+
+            @* <input type="text" asp-for="SourceWord" class="form-control col-md-3" placeholder="введите слово для перевода..."/> *@
+            @* <input type="text" asp-for="DestinationWord" readonly="readonly" class="form-control col-md-3"/> *@
+        </div>
+        <br />
+        <div class="validation text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div><input type="submit" value="Перевести" name="translate" class="btn btn-info" /></div>
+        <br />
+        <div class="row">
+            <div class="col-12">
+                <table id="TranslateResultTable" class="table table-sm table-striped table-hover border-bottom">
+                    <thead>
+                        <tr class="bg-info d-flex">
+                            <th class="d-none d-lg-table-cell col-1">
+                                @Html.DisplayName("English")
+                            </th>
+                            <th class="d-none d-lg-table-cell col-1">
+                                @Html.DisplayName("Russian")
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="TranslateResultTable">
+
+                        @foreach (var item in Model)
+                        {
+                            <tr class="d-flex">
+                                <td class="d-none d-lg-table-cell col-1">
+                                    @Html.DisplayTextFor(x => item.SourceWord)
+                                </td>
+                                <td class="d-none d-lg-table-cell col-1">
+                                    @Html.DisplayTextFor(x => item.DestinationWord)
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>

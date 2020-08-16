@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+    <h3 align="right"> Роль: @ViewBag.Role</h3>
+    <a asp-controller="Translate" asp-action="Translate">Переводчик</a>
+    <br />
+    @{
+        if (User.IsInRole("admin"))
+        {
+            <a asp-controller="FillTranslation" asp-action="Index">Заполнить словарь</a>
+            <br />
+            <a asp-controller="FillTranslation" asp-action="GetTranslations">Cловарь</a>
+            <br />
+        }
+    }
+
+</div>

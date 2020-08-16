@@ -1,0 +1,10 @@
+﻿@model System.Security.Principal.IIdentity
+
+@{
+    ViewBag.Title = "About";
+    Layout = "_Layout";
+}
+
+<h2>@Model.Name</h2>
+<h2>@Model.AuthenticationType</h2>
+<h2>@Model.IsAuthenticated</h2>

@@ -1,0 +1,42 @@
+﻿@using TranslateApplication.Models.Enums
+@using TranslateApplication.Models.Translation
+@model TranslateApplication.Models.FillTranslationModel
+
+@{
+    ViewBag.Title = "Заполнение словаря";
+    Layout = "_Layout";
+}
+
+<form asp-action="Index" asp-controller="FillTranslation" asp-anti-forgery="true" class="col-md-4">
+    <div>
+        <h2>Заполнение словаря</h2>
+
+        <div class="form-group">
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="IsEdit" />
+            <td>
+                <input type="text" asp-for="SourceWord" class="form-control" placeholder="Введите исходное слово..." />
+                <span asp-validation-for="SourceWord" />
+            </td>
+            <td>
+                @Html.DropDownListFor(x => x.SourceLanguageId,
+                    LanguageListReceiver.GetSelectList(typeof(Languages)), new { @class = "form-control" })
+            </td>
+        </div>
+
+        <div>
+            <td>
+                <input type="text" asp-for="Translation" class="form-control" placeholder="Введите перевод..." />
+            </td>
+            <td>
+                @Html.DropDownListFor(x => x.TranslationLanguageId,
+                    LanguageListReceiver.GetSelectList(typeof(Languages)), new { @class = "form-control" })
+            </td>
+        </div>
+        <br />
+        <div class="validation text-danger" asp-validation-summary="ModelOnly"></div>
+        <div><input type="submit" value="Сохранить" name="save" class="btn btn btn-success" /></div>
+
+        <br />
+    </div>
+</form>
